@@ -1,4 +1,4 @@
-name: Build Rythim Music APK
+name: Build Taa Music APK
 
 on:
   workflow_dispatch:
@@ -26,10 +26,10 @@ jobs:
         include:
           - variant: foss
             variantName: Foss
-            apkName: Rythim-Music-foss.apk
+            apkName: Taa-Music-foss.apk
           - variant: gms
             variantName: Gms
-            apkName: Rythim-Music-gms.apk
+            apkName: Taa-Music-gms.apk
 
     steps:
       - name: Checkout repository
@@ -60,8 +60,8 @@ jobs:
       - name: Build Release APK
         run: ./gradlew --console=plain assemble${{ matrix.variantName }}Release --warning-mode summary -x lint --stacktrace
         env:
-          RYTHIM_APPLICATION_ID: com.rythim.music
-          RYTHIM_APP_NAME: Rythim Music
+            TAA_APPLICATION_ID: com.Taa.music
+          TAA_APP_NAME: Taa Music
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
 
