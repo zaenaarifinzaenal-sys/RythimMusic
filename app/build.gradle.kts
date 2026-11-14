@@ -20,7 +20,7 @@ if (localPropertiesFile.exists()) {
     localProperties.load(localPropertiesFile.inputStream())
 }
 
-val baseApplicationId = "com.rythim.music"
+val baseApplicationId = "com.Taaa.music"
 val applicationIdOverride = System.getenv("RYTHIM_APPLICATION_ID")?.takeIf { it.isNotBlank() }
 val appNameOverride = System.getenv("RYTHIM_APP_NAME")?.takeIf { it.isNotBlank() }
 val debugKeystorePathOverride = System.getenv("RYTHIM_DEBUG_KEYSTORE_PATH")?.takeIf { it.isNotBlank() }
@@ -89,7 +89,7 @@ abstract class GenerateProtoTask : DefaultTask() {
 }
 
 android {
-    namespace = "com.rythim.music"
+    namespace = "com.Taa.music"
     compileSdk = 37
 
     defaultConfig {
@@ -98,7 +98,7 @@ android {
         targetSdk = 36
         versionCode = 148
         versionName = "13.5.0"
-        resValue("string", "app_name", appNameOverride ?: "Rythim Music")
+        resValue("string", "app_name", appNameOverride ?: "Taa Music")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -197,7 +197,7 @@ android {
             }
             isDebuggable = true
             if (appNameOverride == null) {
-                resValue("string", "app_name", "Rythim Music Debug")
+                resValue("string", "app_name", "Taa Music Debug")
             }
             signingConfig =
                 if (workflowDebugKeystoreFile != null) {
