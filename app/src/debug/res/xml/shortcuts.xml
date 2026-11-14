@@ -17,8 +17,8 @@
         android:shortcutId="library"
         android:shortcutShortLabel="@string/filter_library">
         <intent
-            android:action="com.rythim.music.action.LIBRARY"
-            android:targetClass="com.rythim.music.MainActivity"
-            android:targetPackage="com.rythim.music.debug" />
+            android:action="com.Taa.music.action.LIBRARY"
+            android:targetClass="com.Taa.music.MainActivity"
+            android:targetPackage="com.Taa.music.debug" />
     </shortcut>
 </shortcuts>
